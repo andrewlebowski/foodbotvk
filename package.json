@@ -1,16 +1,20 @@
 {
   "name": "botvk",
   "version": "1.0.0",
-  "description": "",
   "main": "bot.js",
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.18.0",
+    "node-vk-bot-api": "^2.1.8",
+    "querystring": "^0.2.0"
+  },
   "devDependencies": {},
   "scripts": {
-    "start" : "node bot.js"
+    "start": "node bot.js"
   },
   "engines": {
-    "node" : "10.13.0"
+    "node": "10.13.0"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }

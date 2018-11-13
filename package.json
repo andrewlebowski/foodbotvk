@@ -1,0 +1,16 @@
+{
+  "name": "botvk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start" : "node bot.js"
+  },
+  "engines": {
+    "node" : "10.13.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -67,13 +67,19 @@ const sceneSearch = new Scene('startSearch',
                     ctx.reply("Возможно, есть более близкие места, но они не добавлены на Яндекс.Карты. Вот, что я нашел по вашему запросу:")
                     for(var i = 0; i < response.length; i++){
                         if(i == 3) break;
-                        var toSender = {
+                        toSender = {
                             message: "Название: " + response[i].name
                                     + "\nАдрес: " + response[i].address
                                     + "\nВремя работы: " + response[i].time
                                     + "\nСтатус: " + response[i].state,
                             lat: response[i].geo[1],
                             long : response[i].geo[0]
+                        }
+                        if(response[i].bill != '-'){
+                            toSender.message += "\nСредний чек: " + response[i].bill
+                        }
+                        if(response[i].vkLink != '-'){
+                            toSender.message += "\nГруппа ВК: " + response[i].vkLink
                         }
                         ctx.reply(toSender)
                     }
